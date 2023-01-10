@@ -14,8 +14,7 @@ for c in cont:
     if len(aprx) == 3:
         cv.putText(img, "Triangle", (x+7, y-7), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0))
     elif len(aprx) == 4:
-        x1 ,y1, w1, h1 = cv.boundingRect(aprx)
-        r = float(w1)/h1
+        r = float(w)/h
         if r >= 0.95 and r <= 1.05:
             cv.putText(img, "Square", (x+7, y-7), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0))
         else:
